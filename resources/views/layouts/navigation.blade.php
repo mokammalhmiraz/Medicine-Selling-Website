@@ -19,19 +19,7 @@
                     <x-nav-link href="{{ url('item') }}" :active="request()->routeIs('itemGIT')">
                         {{ __('Item') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ url('request_list') }}" :active="request()->routeIs('itemGIT')">
-                        {{ __('Item Request') }}
-                    </x-nav-link>
                     @endif
-                    <x-nav-link href="{{ url('order_list') }}" :active="request()->routeIs('itemGIT')">
-                        {{ __('Order List') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ url('feedback') }}" :active="request()->routeIs('itemGIT')">
-                        {{ __('Support') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ url('sale') }}" :active="request()->routeIs('itemGIT')">
-                        {{ __('Sale List') }}
-                    </x-nav-link>
 
                 </div>
             </div>

@@ -167,9 +167,6 @@
                                 <th scope="col" class="px-6 py-3">
                                     Item Added At
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Action
-                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -213,12 +210,7 @@
                                         {{ App\Models\User::find($item->item_added_by)->name }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        {{ $item->created_at->diffForHumans() }}
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <a href="{{ url('/item/view') }}/{{ $item->id }}" class="btn btn-danger btn-sm">Edit</a>
-                                        <br>
-                                        <a href="{{ url('/item/delete') }}/{{ $item->id }}" class="btn btn-danger btn-sm">Delete</a>
+                                        {{ $item->created_at }}
                                     </td>
                                 </tr>
                             @endforeach

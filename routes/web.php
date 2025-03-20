@@ -9,10 +9,6 @@ use App\Http\Controllers\ItemController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Mailcontroller;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\FeedbackController;
-use App\Http\Controllers\SaleController;
-use App\Http\Controllers\RequestController;
 
 Route::get('/search', [SearchController::class, 'index'])->name('search');
 
@@ -48,27 +44,12 @@ Route::get('/review/show/{item_id}', [ReviewController::class,'show']);
 
 Route::get('/item', [ItemController::class,'index']);
 Route::post('/item/insert', [ItemController::class,'insert']);
-Route::get('/item/view/{id}', [ItemController::class,'view']);
-Route::post('/item/edit', [ItemController::class,'edit']);
-Route::get('/item/delete/{id}', [ItemController::class,'delete']);
-
-Route::get('/order_list', [OrderController::class,'index']);
-Route::get('/order_list/items/{id}', [OrderController::class,'items']);
-Route::get('/order_list/details/{id}', [OrderController::class,'billing_details']);
-
-Route::get('/feedback', [FeedbackController::class,'index']);
-Route::post('/feedback/insert', [FeedbackController::class,'insert']);
-Route::get('/feedback/update/{id}', [FeedbackController::class,'update']);
-Route::get('/feedback/delete/{id}', [FeedbackController::class,'delete']);
-
-
-Route::get('/sale', [SaleController::class,'index']);
 
 
 
 //===================================================================================//
 //===================================================================================//
-// order route
+// order route 
 //to add
 Route::post('/item/order/{item_id}', [ItemController::class,'order']);
 //to remove
@@ -87,11 +68,6 @@ Route::get('/add_wishlist/{item_id}', [ItemController::class,'add_wishlist']);
 Route::get('/remove_wishlist/{id}/{item_id}', [ItemController::class,'remove_wishlist']);
 
 Route::post('/wish_order/{item_id}', [ItemController::class,'wish_order']);
-
-Route::get('/request_item/{item_id}', [RequestController::class,'request']);
-Route::post('/request_item/order', [RequestController::class,'order']);
-
-Route::get('/request_list', [RequestController::class,'index']);
 
 
 //=======================================================================================================//
